@@ -1,3 +1,8 @@
+/*Created 7 July 2018
+By Victor Kumbol
+*/
+
+
 #include <Wire.h>
 #include <LiquidCrystal_I2C.h> //import libraries for LCD screen
 #include <SD.h> //import the SD Card library
@@ -5,10 +10,9 @@
 
 LiquidCrystal_I2C lcd(0x27,16,2);
 
-int outPin = 13; //the indicator LED pin
+
 int count = 0; //this variable will store the number of beam breaks
-int limit = 0; //Threshold for detecting IR radiation.This sets the sensitivity of the sensors
-long outTime = 0; // this variable stores the last time a beam was broken
+int threshold = 400; //Threshold for detecting IR radiation.This sets the sensitivity of the sensors
 long runTime = 0; // this variable records the duration of the current test
 long syncTime = 0; //this variable stores the last time the data was stored ot the SD card
 
@@ -16,7 +20,7 @@ File logfile; // the logging file
 
 
 const long SYNC_INTERVAL = 60000; //mills between calls to flush()
-const int chipSelect = 4;
+const int chipSelect = 4; //the output pin for the SD card
 
 String Sensor; //this stores the string type of the current sensor
 String Count; //this variable stores the string type of the current beam-break count
@@ -24,13 +28,14 @@ String Count; //this variable stores the string type of the current beam-break c
 int minutes;
 int seconds;
 int errors = false;
- //rows and cols will define the size of the array
+
+ //rows and cols will define the size of the array that stores pin assignments for the IR sensors
 const int rows = 2;
 const int cols = 8;
 
 
 int SensorMatrix[rows][cols] = {
-  // This matrix will hold the pin assignments for the Sensors
+  // This matrix will hold the pin assignments for the IR sensors
   {0, 1, 2, 3, 4, 5, 6, 7},
   {8, 9, 10, 11, 12, 13, 14, 15}
 };
@@ -50,20 +55,18 @@ int lastSensorStateMatrix[rows][cols] = {
 
 void setup() {
 Serial.begin(9600); //initialize serial monitor for writing
-pinMode(outPin, OUTPUT); //set outPin as an output pin
 pinMode(4, OUTPUT); // set the default chip select pin to output
 initialize();
-} //close setup()
+}
 
 
 void loop() {
-scan_sensors();
-display();
-log_data(minutes, count);
-} //close loop()
+scan_sensors(); //call function to scan the IR sensors
+display(); //call function to display results on LCD screen
+log_data(minutes, count);  //call funtion to store results to SD card
+}
 
-
-//This function will initialize the IR sensors, lcd display and data logger
+//This function will initialize the IR sensors, lcd display and data logger to ensure they are working properly
 void initialize() {
 //initialize lcd screen for display
   lcd.init();
@@ -80,16 +83,16 @@ void initialize() {
   for(int i = 0; i < rows; i++){
       for(int j = 0; j < cols; j++){
       SensorStateMatrix[i][j] = analogRead(SensorMatrix[i][j]); //read the current value of the corresponding sensor
-      if (SensorStateMatrix[i][j] < limit){
-        // if sensor is malfunctioning the reading < limit.
+      if (SensorStateMatrix[i][j] < threshold){
+        // if the reading from a sensor < threshold, toggle errors as true.
         errors = true;
         delay(20);
         }
-      }//close for j
-    }//close for i
+      }
+    }
 
     if (errors) {
-      error("IR sensors faulty");
+      error("IR sensors faulty"); //report errors with sensors if any
     }
     else {
       lcd.clear();
@@ -104,7 +107,7 @@ void initialize() {
       delay(5000);
       // see if the card is present and can be initialized:
       if (!SD.begin(chipSelect)) {
-        error("SD card failed");
+        error("SD card failed"); //report error with SD card if detected
       }
       Serial.println("SD card OK");
       lcd.clear();
@@ -125,7 +128,7 @@ void initialize() {
       }
 
       if (! logfile) {
-        error("file not created");
+        error("file not created"); //report error with creating a file, if any
       }
 
       Serial.print("Logging to: ");
@@ -152,18 +155,16 @@ void scan_sensors(){
   for(int i = 0; i < rows; i++){
     for(int j = 0; j < cols; j++){
   SensorStateMatrix[i][j] = analogRead(SensorMatrix[i][j]); //read the current value of the corresponding sensor
-
-  if (SensorStateMatrix[i][j] <= limit && lastSensorStateMatrix[i][j] > limit) {
-  // if the beam was just broken (i.e. the sensor value dropped below the limit) increment count and record the time
+  if (SensorStateMatrix[i][j] <= threshold && lastSensorStateMatrix[i][j] > threshold) {
+  // if the beam was just broken (i.e. the sensor value dropped below the threshold) increment count and record the time
     count += 1;
-    outTime = millis(); //
     Sensor = String(SensorMatrix[i][j] + 1);
   }
   lastSensorStateMatrix[i][j] = SensorStateMatrix[i][j];
  delay(2);
-    }//close for j
+    }
 
-  }//close for i
+  }
      delay(50);
 return;
 }
@@ -202,13 +203,13 @@ void log_data (int a, int b){
     a=1;
     }
 
-  // log minutes since starting
+  // log minutes since starting to the SD card
   logfile.print(String(a));           // milliseconds since start
   logfile.print(", ");
   Serial.print(String(a));         // milliseconds since start
   Serial.print(", ");
 
-//log the activity count since starting
+//log the activity count to the SD card
   logfile.print(String(b));
   logfile.println();
   Serial.print(String(b));
@@ -216,4 +217,3 @@ void log_data (int a, int b){
   logfile.flush();
   syncTime = millis();
 }
-

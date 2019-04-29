@@ -17,15 +17,15 @@ I and my friends started this project because we realised we could build some of
  
 *The solution*
 
-The Open Science hardware movement has gained popularity in recent years. Using open source designs, code and tools, scientists can now build and customise their own equipment, usually at a fraction of the cost of commercial versions. However, this movement is relatively new to African scientists who may not have the skills to build their own equipment. 
+The [Open Science hardware](http://openhardware.science/) movement has gained popularity in recent years. Using open source designs, code and tools, scientists can now build and customise their own equipment, usually at a fraction of the cost of commercial versions. However, this movement is relatively new to African scientists who may not have the skills to build their own equipment. 
 
 Therefore this project was initiated to build and document some equipment as a step in tackling this problem. We chose to build an actimeter as our first equipment because it is routinely used in experiments in our faculty and the current approach is a very laborious task of manually tracking experiment videos.
 
 # Who we are??
-This project was initiated by me, <a href="https://twitter.com/v_kumbol">Victor</a>, and my friends, <a href="https://twitter.com/AmpofoElikplim">Eli</a> and <a href="https://twitter.com/mary_twumasi">Mary</a> while we were graduate students at the <a href="https://www.knust.edu.gh/">Kwame Nkrumah University of Technology </a> in Ghana. 
+This project was initiated by me, [Victor](https://twitter.com/v_kumbol), and my friends, [Eli](https://twitter.com/AmpofoElikplim) and [Mary](https://twitter.com/mary_twumasi) while we were graduate students at the [Kwame Nkrumah University of Technology](https://www.knust.edu.gh/) in Ghana. 
 
 
-The project was supported by the generous mentorship and funding we received during the 1st TReND Advanced Open Labware Workshop in April 2018. 
+The project was supported by the generous mentorship and funding we received during the [1st TReND Advanced Open Labware Workshop](http://trendinafrica.org) in April 2018. 
 
 I also received further support and mentorship to reorganise this repository while participating in the 14th Cohort of the Mozilla Open Leaders program.
 
@@ -67,6 +67,6 @@ If you want to customise the Actifield, feel free to download or fork the reposi
 If you need help with building your own actimeter don’t hesitate to get in touch.
 
 # Contact Us
-If you have any questions or suggestions, you can simply open an issue here in this repository. You can also send Victor an email. Wanna hang out on social media? Follow me on Twitter.
+If you have any questions or suggestions, you can simply open an issue here in this repository. You can also send Victor an [email](kumbolvictor@gmail.com). Wanna hang out on social media? Follow me on [Twitter](https://twitter.com/v_kumbol).
 
 

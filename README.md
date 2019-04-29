@@ -57,9 +57,9 @@ We need expertise in the following areas
 
 
 ## Get involved
-If you can help in any of the areas listed above or in any of the many areas that we haven't yet thought of, then please check out our contributors' guidelines and our roadmap.
+If you can help in any of the areas listed above or in any of the many areas that we haven't yet thought of, then please check out our [roadmap](ROADMAP.md).
 
-Please note that it's very important to us that we maintain a positive and supportive environment for everyone who wants to participate. When you join us we ask that you follow our code of conduct in all interactions both on and offline.
+Please note that it's very important to us that we maintain a positive and supportive environment for everyone who wants to participate. When you join us we ask that you follow our [code of conduct](CODE_OF_CONDUCT.md) in all interactions both on and offline.
 
 ## How can you use it?
 If you want to customise Actifield, feel free to download or fork the repository and adapt the content (designs and code) to suit your needs. Everything here is freely reusable.

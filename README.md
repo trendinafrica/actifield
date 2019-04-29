@@ -1,6 +1,6 @@
 # README 🗺️  
 
-# Welcome! Or as we say it in Ghana, *Akwaaba!
+# Welcome! Or as we say it in Ghana, *Akwaaba!*
 
 This is the Actifield project repository and we’re excited to have you here. 
 
@@ -67,6 +67,6 @@ If you want to customise the Actifield, feel free to download or fork the reposi
 If you need help with building your own actimeter don’t hesitate to get in touch.
 
 # Contact Us
-If you have any questions or suggestions, you can simply open an issue here in this repository. You can also send Victor an [email](kumbolvictor@gmail.com). Wanna hang out on social media? Follow me on [Twitter](https://twitter.com/v_kumbol).
+If you have any questions or suggestions, you can simply open an issue here in this repository. You can also send Victor an <A HREF="mailto:kumbolvictor@gmail.com">email</A>. Wanna hang out on social media? Follow me on [Twitter](https://twitter.com/v_kumbol).
 
 

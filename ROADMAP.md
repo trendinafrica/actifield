@@ -8,7 +8,7 @@ This document identifies the project's vision, its current status, and how to re
 We are working with scientists and developers in Ghana to build a local open hardware community to empower scientists to develop their own lab equipment. We are currently working on upgrading, Actifield, a device for behavioural experiments that we developed for neuroscientists.
 
 ## Project Summary
-We’re building an equipment called an actimeter. At the simplest, the actimeter is used to measure and record the locomotor activity - how fast or slow a test animal (usually rodents), is moving. This information is useful for several tests such as screening for potentially toxic effects of a new drug on the brain. We developed this project for scientists who need a simple and inexpensive actimeter that can be easily built. 
+We’re building an equipment called an actimeter. At the simplest, the actimeter is used to measure and record the locomotor activity - how fast or slow a test animal (usually rodents), is moving. More information about Actifield [here](Project Description.md). We developed this project for scientists who need a simple and inexpensive actimeter that can be easily built. 
  
 ## Milestones
 
@@ -22,29 +22,33 @@ Also, don't forget to read our [Code of Conduct](CODE_OF_CONDUCT.md) 😉
 > A community member files an issue or adds a pull request.
 
 - [ ] **Display live graphs of activity counts on screen**
-> Figure out how to make a code sandbox that supports modern web technologies. Research how similar existing tools work: CodePen, jsFiddle, etc.
+> Figure out how to display the results as a live graph on the computer screen. Check out this [issue](https://github.com/trendinafrica/actifield/issues/2)
 
 - [ ] **Display an onscreen grid showing the current location of the mouse in the activity cage**
-> Figure out how to make a code sandbox that supports modern web technologies. Research how similar existing tools work: CodePen, jsFiddle, etc.
+> Figure out how to determine and show the realtime location of the mouse in the test arena. Check out this [issue](https://github.com/trendinafrica/actifield/issues/3)
 
-- [ ] **Build graphical control interface to control the device from the computer**
-> Figure out how to make a code sandbox that supports modern web technologies. Research how similar existing tools work: CodePen, jsFiddle, etc.
+- [ ] **Build graphical interface to control the device from the computer**
+> More on this [here](https://github.com/trendinafrica/actifield/issues/5)
 
 - [ ] **Check available disk space on SD card before recording counts**
-> Figure out how to make a code sandbox that supports modern web technologies. Research how similar existing tools work: CodePen, jsFiddle, etc.
+> More on this [here](https://github.com/trendinafrica/actifield/issues/4).
 
 
 ### Medium term: June - August, 2019 
 
 - [ ] **Create manual for users to build or customise the device**
-> Figure out how to make a code sandbox that supports modern web technologies. Research how similar existing tools work: CodePen, jsFiddle, etc.
+> Write a manual to guide new users to build or customise the device. Check out this [issue](https://github.com/trendinafrica/actifield/issues/6)
 
 - [ ] **Build project website**
-> Figure out how to make a code sandbox that supports modern web technologies. Research how similar existing tools work: CodePen, jsFiddle, etc.
-
-- [ ] **Build project website**
-> Build website (Github pages) with useful resources for African scientists interested in developing their own equipment
+> Build website (a [GitHub page](https://pages.github.com/)) to make it easier for users to find and explore our material. with useful resources for African scientists interested in developing their own equipment
 
 - [ ] **Organise training workshop**
 > Organise training workshop on building open labware for Ghanaian scientists 
 
+
+### Completed
+- [x] **Build first prototype of Actifield**
+> The first prototype of Actified has been built and the designs uploaded onto GitHub.
+
+- [x] **Publish Actifield in a journal**
+> Actifield was published in [HardwareX](https://www.sciencedirect.com/science/article/pii/S2468067218300695). This will help provide credibility for academic users and a reference to be cited when used in research works.

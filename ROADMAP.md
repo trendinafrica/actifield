@@ -8,7 +8,9 @@ This document identifies the project's vision, its current status, and how to re
 We are working with scientists and developers in Ghana to build a local open hardware community to empower scientists to develop their own lab equipment. We are currently working on upgrading, Actifield, a device for behavioural experiments that we developed for neuroscientists.
 
 ## Project Summary
-We’re building an equipment called an actimeter. At the simplest, the actimeter is used to measure and record the locomotor activity - how fast or slow a test animal (usually rodents), is moving. More information about Actifield [here](Project Description.md). We developed this project for scientists who need a simple and inexpensive actimeter that can be easily built. 
+We’re building an equipment called an actimeter. At the simplest, the actimeter is used to measure and record the locomotor activity - how fast or slow a test animal (usually rodents), is moving. More details about Actifield [here](Project_Description.md). 
+
+We developed this project for scientists who need a simple and inexpensive equipment that can be easily built. 
  
 ## Milestones
 

@@ -57,7 +57,7 @@ We need expertise in the following areas
 
 
 ## Get involved
-If you can help in any of the areas listed above or in any of the many areas that we haven't yet thought of, then please check out our [roadmap](ROADMAP.md).
+If you can help in any of the areas listed above or in any of the many areas that we haven't yet thought of, then please check out our [roadmap](ROADMAP.md) and [contribution guidelines](CONTRIBUTING.md).
 
 Please note that it's very important to us that we maintain a positive and supportive environment for everyone who wants to participate. When you join us we ask that you follow our [code of conduct](CODE_OF_CONDUCT.md) in all interactions both on and offline.
 

@@ -14,9 +14,7 @@ We developed this project for scientists who need a simple and inexpensive equip
  
 ## Milestones
 
-Down below are a list of milestones that represent the overall goals of the project. Preferably, they are to be done in sequential order. But you can help in any task you feel comfortable with
-
-Also, don't forget to read our [Code of Conduct](CODE_OF_CONDUCT.md) 😉
+Down below are a list of milestones that represent the overall goals of the project. Preferably, they are to be done in sequential order. But you can help in any task you feel comfortable with. Please read our [Contribution Guidelines](CONTRIBUTING.md) and our [Code of Conduct](CODE_OF_CONDUCT.md) 😉
 
 ### Short term: During Sprint for Internet Health (May 2019)
 

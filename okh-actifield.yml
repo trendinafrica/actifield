@@ -67,7 +67,7 @@ contributors:                              # recommended
 #    affiliation: [value]                   # text
     email: kumbolvictor@gmail.com   # email address
 
-#image: [value]                             # recommended | absolute or relative path
+image: https://ars.els-cdn.com/content/image/1-s2.0-S2468067218300695-gr1.jpg                             # recommended | absolute or relative path
 
 #version: [value]                           # text
 
